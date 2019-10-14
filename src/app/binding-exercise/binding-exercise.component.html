@@ -1,0 +1,16 @@
+<div class="container-fluid">
+  <h3>Binding exercise</h3>
+  <input
+    type="text"
+    name=""
+    value=""
+    class="col-6"
+    [(ngModel)]="username">
+  <p [innerText]="username"></p>
+  <button
+    type="button"
+    name="button"
+    [disabled]="username.length === 0"
+    (click)="clearUsername()"
+  >Clear username</button>
+</div>

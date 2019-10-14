@@ -1,0 +1,13 @@
+<div class="d-flex flex-md-column">
+  <div class="p-2">
+    <button type="button" name="button" (click)="onToggleDisplayDetails($event)">Display Details</button>
+  </div>
+  <div class="p-2">
+    <p [innerText]="secretPassword" *ngIf="displayDetails"></p>
+  </div>
+  <div class="p-2">
+    <p *ngFor="let timestamp of displayDetailsClicks; let i = index"
+       [ngClass]="{'white-color': i > 3}"
+       [ngStyle]="{'background': i > 3 ? 'blue' : 'white' }">{{i+1}}. {{timestamp}}</p>
+  </div>
+</div>

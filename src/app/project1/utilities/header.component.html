@@ -1,0 +1,9 @@
+<div class="{{headerModel.classes}}"
+     *ngIf="headerModel">
+     <ul class="nav nav-tabs nav-justified">
+       <li class="nav-item active {{header.classes}}"
+           *ngFor="let header of headerModel.headers; let index = index">
+         <a class="nav-link" href="#" (click)="header.onClick()">{{header.label}}</a>
+       </li>
+     </ul>
+</div>

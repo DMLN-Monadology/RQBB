@@ -1,8 +1,23 @@
-<server class="col-4"></server>
-<server class="col-4"></server>
-<server class="col-4"></server>
-<server class="col-4"></server>
-<server class="col-4"></server>
-<server class="col-4"></server>
-<server class="col-4"></server>
-<server class="col-4"></server>
+<h5 class="col-6">Allow New Server:</h5>
+<p class="col-6" [innerText]="allowNewServer"></p>
+<h5 class="col-6">Server Creation Status: </h5>
+<p class="col-6">{{serverCreationStatus}}</p>
+<button class="btn btn-primary"
+        type="button"
+        name="button"
+        [disabled]="!allowNewServer"
+        (click)="onCreateServer()">Add server</button>
+
+<server *ngFor="let server of servers"></server>
+
+<input type="text"
+       name=""
+       class="form-control"
+       [(ngModel)]="serverName"
+       value="">
+<h5 class="col-5">Server Name: </h5>
+<p class="col-4">{{serverName}}</p>
+<button
+  type="btn btn-primary col-3"
+  name="button"
+  (click)="resetServerName()">Reset Server Name</button>
