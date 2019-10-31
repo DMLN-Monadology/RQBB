@@ -1,4 +1,15 @@
 <p>g-db-home works!</p>
+
+<button id="increment" (click)="incrementHandler()">Increment</button>
+
+<div>Current Count Async: {{ count$ | async }}</div>
+
+<div>Current Count Local: {{ count }}</div>
+
+<button id="decrement" (click)="decrementHandler()">Decrement</button>
+
+<button id="reset" (click)="resetHandler()">Reset Counter</button>
+
 <div
   *ngFor="let guardian of guardians">
   <g-db-widget></g-db-widget>
